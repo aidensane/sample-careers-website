@@ -16,12 +16,16 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="text-center mt-2 mb-4">Vane Accessories</h1>
+        <h1 class="text-center mt-2 mb-4">{{company_name}} Accessories</h1>
         <img class="img-fluid" id="banner" src="static\image.jpg" alt="">
         <h2>About Vane</h2>
         <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel adipisci repudiandae amet distinctio sunt porro suscipit placeat consequatur excepturi enim, veniam voluptas cum possimus qui aspernatur mollitia eum reiciendis soluta officiis recusandae nisi id? Impedit quo aliquam porro nam totam. Architecto consectetur praesentium beatae et minus adipisci vel assumenda incidunt.</p>
         <h2 class="text-center mt-2 mb-4">Our Pieces</h2>
-        <p>TODO show jewelry here</p>
+        <p>
+            {% for piece in pieces %}
+                {% include 'piece-items.html' %}
+            {% endfor %}
+        </p>
         <div class="text-center">
             <button class="btn btn-primary btn-lg">Contact us!</button>
             <p class="mt-4">Copyright 2023, VANE.</p>
@@ -30,4 +34,4 @@
     </div>
     
 </body>
-</html>
+</html>  
