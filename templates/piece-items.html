@@ -1,11 +1,16 @@
-<div style="margin-bottom: 16px;">
-    <h4 style="color: grey; margin-bottom: 4px">{{piece['name']}}</h4>
-    <div>
-        <b>Type:</b> {{piece['type']}}
+<div class="border-bottom row" style="margin-bottom: 16px; padding-bottom: 8px">
+    <div class="col-9">
+        <h4 style="color: grey; margin-bottom: 4px;">{{piece['name']}}</h4>
+        <div>
+            <b>Type:</b> {{piece['type']}}
+        </div>
+        {% if 'price' in job  %}
+        <div>
+            <b>Price:</b> {{piece['price']}}
+        </div>
+        {% endif %}
     </div>
-    {% if 'price' in job  %}
-    <div>
-        <b>Price:</b> {{piece['price']}}
+    <div class="col-3">
+        <button type="button" class="btn btn-primary">Add</button>
     </div>
-    {% endif %}
 </div>
